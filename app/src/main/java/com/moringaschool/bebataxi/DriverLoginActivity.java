@@ -36,7 +36,7 @@ public class DriverLoginActivity extends AppCompatActivity {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                if (user!=null){
+                if (user !=null){
                     Intent intent = new Intent(DriverLoginActivity.this, DriverMapsActivity.class);
                     startActivity(intent);
                     finish();
@@ -59,12 +59,13 @@ public class DriverLoginActivity extends AppCompatActivity {
                 mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(DriverLoginActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()){
-                            Toast.makeText(DriverLoginActivity.this,"sign up error", Toast.LENGTH_SHORT).show();
+                        if (!task.isSuccessful()){
+                            Toast.makeText(DriverLoginActivity.this,"SignUp Failed! Try Again", Toast.LENGTH_SHORT).show();
                         }else {
+//                            startActivity(new Intent(DriverLoginActivity.this, DriverMapsActivity.class));
                             String user_id = mAuth.getCurrentUser().getUid();
-                            DatabaseReference current_user_db = FirebaseDatabase.getInstance().getReference().child("Users").child("Drivers").child(user_id);
-                            current_user_db.setValue(true);
+                            DatabaseReference current_user_db = FirebaseDatabase.getInstance().getReference().child("Users").child("Drivers").child(user_id).child("name");
+                            current_user_db.setValue(email);
                         }
                     }
                 });
@@ -80,7 +81,7 @@ public class DriverLoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
-                            Toast.makeText(DriverLoginActivity.this,"sign in error", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(DriverLoginActivity.this,"Login Failed! Try Again", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

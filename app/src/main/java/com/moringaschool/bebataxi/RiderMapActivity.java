@@ -75,7 +75,7 @@ public class RiderMapActivity extends FragmentActivity implements OnMapReadyCall
                 pickUpLocation = new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude());
                 mMap.addMarker(new MarkerOptions().position(pickUpLocation).title("Pick Me Up Here"));
 
-                mRequest.setText("Getting Your Driver...");
+                mRequest.setText("Requesting Your Ride...");
             }
         });
     }
