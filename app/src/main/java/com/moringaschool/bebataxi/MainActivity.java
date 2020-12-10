@@ -27,5 +27,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        mRider.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, RiderLoginActivity.class);
+                startActivity(intent);
+                finish();
+                return;
+            }
+        });
+
     }
 }
