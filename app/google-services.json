@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "120317300345",
+    "project_id": "beba-taxi",
+    "storage_bucket": "beba-taxi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:120317300345:android:45a3c8bdbbfcf7c9008ea8",
+        "android_client_info": {
+          "package_name": "com.moringaschool.bebataxi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "120317300345-2nccu1vefo85ncdb28crsjsnfqife75l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.moringaschool.bebataxi",
+            "certificate_hash": "cf64b978904b5403c9835b4e8725210cb2a69598"
+          }
+        },
+        {
+          "client_id": "120317300345-iml4k9qmdigk7ifq05l4ja1lb00h85b9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeCqU1tU-gXrbV0sjKbwbCwUUmmMrH8sU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "120317300345-iml4k9qmdigk7ifq05l4ja1lb00h85b9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
