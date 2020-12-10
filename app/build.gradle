@@ -43,4 +43,5 @@ dependencies {
     implementation 'com.firebaseui:firebase-ui-database:3.3.1'
     implementation 'com.google.firebase:firebase-auth'
     implementation 'com.google.android.gms:play-services-location:11.0.2'
+    implementation 'com.firebase:geofire-android:3.0.0'
 }
